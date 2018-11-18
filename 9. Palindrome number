@@ -1,0 +1,13 @@
+class Solution:
+    def isPalindrome(self, x):
+        self.x = x
+        y = str(self.x)
+        if len(y) == 1:
+            return True
+        if len(y) != 1:
+            for i in range(int(len(y)/2)):
+                if y[i]!=y[len(y)-i-1]:
+                    return False
+            return True
+b = Solution()
+b.isPalindrome(1000021)
