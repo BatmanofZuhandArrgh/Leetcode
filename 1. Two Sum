@@ -1,0 +1,13 @@
+class Solution:
+    # @return a tuple, (index1, index2)
+    def twoSum(self, num, target):
+        length = len(num)
+        # use dict: value: index + 1
+        # since there is only one solution, the right value must not be duplicated
+        dic = {}
+        for i in range(0, length):
+            val = num[i]
+            if (target - val) in dic:
+                return (dic[target - val], i)
+            dic[val] = i
+
